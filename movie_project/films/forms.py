@@ -4,4 +4,11 @@ from .models import Movie
 class MovieForm(forms.ModelForm):
     class Meta:
         model = Movie
-        fields = ['title', 'description', 'review']
+        fields = ['title', 'description', 'review', 'rating', 'link']
+        labels = {
+            'title': 'Название',
+            'description': 'Описание',
+            'review': 'Отзыв',
+            'rating': 'Оценка',
+            'link': 'Ссылка'
+        }
